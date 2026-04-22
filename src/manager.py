@@ -31,8 +31,11 @@ class ShellCommandManager:
         except KeyError:
             raise CommandNotFound()
 
-    def replace(self, new_cmd: ShellCommand):
-        if new_cmd.name not in self._shell_commands:
+    def replace(self, new_cmd: ShellCommand, old_name: CommandName | None = None):
+        if old_name is not None and old_name != new_cmd.name:
+            if old_name in self._shell_commands:
+                del self._shell_commands[old_name]
+        elif new_cmd.name not in self._shell_commands:
             raise CommandNotFound()
 
         self._shell_commands[new_cmd.name] = new_cmd
