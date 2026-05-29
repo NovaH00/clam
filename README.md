@@ -36,9 +36,9 @@ Prompts for name, alias command, and description.
 ### Run an alias
 
 ```bash
-clam run <name>
-# or just run without arguments to see available aliases
-clam run
+clam <name>
+# or run without arguments to see available aliases
+clam
 ```
 
 ### Show all aliases

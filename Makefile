@@ -5,7 +5,7 @@ INSTALL_DIR := $(HOME)/.local/bin
 
 .PHONY: all build install uninstall clean run check
 
-all: build
+all: build install
 
 check:
 	@command -v uv run nuitka >/dev/null 2>&1 || { \
