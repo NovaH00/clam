@@ -24,7 +24,7 @@ class ShellCommandManager:
             raise CommandAlreadyExists() 
 
         self._shell_commands[cmd.name] = cmd
-        
+
     def remove(self, name: CommandName):
         try:
             del self._shell_commands[name]

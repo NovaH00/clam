@@ -15,6 +15,12 @@ uv sync
 
 # Build with Nuitka
 uv run build.py
+
+# Or build with Make
+make build
+
+# Optionally install to ~/.local/bin/
+make install
 ```
 
 ## Usage
